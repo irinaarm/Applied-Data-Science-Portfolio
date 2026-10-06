@@ -1,27 +1,28 @@
-## [Analysis of real estate market value](https://github.com/irinaarm/Data_Science_Yandex/blob/main/02_exploratory_data_analysis_(real_estate)/exploratoy_data_analysis_eng.ipynb)
+# Real Estate Market Analysis
 
-## Goal
+## Business problem
 
-Determination of the market value of real estate and typical parameters of apartments in St. Petersburg and the Leningrad region, identification of anomalies to create an automated system for tracking fraudulent activity
+Determine the factors that influence residential property values in Saint Petersburg and the surrounding region, and identify parameters useful for detecting anomalous listings.
 
-## Description
+## Approach
 
-Based on Yandex service data.Real estate, it is necessary to determine the market value of real estate of different types, typical parameters of apartments, depending on the distance from the centre.
+- Cleaned missing values, anomalies, and inconsistent data types.
+- Engineered price, date, floor, and distance-related features.
+- Analyzed property characteristics, geographic patterns, and publication timing.
+- Compared the city center with the wider market.
 
-There are omissions, anomalies, and errors in the data.
+## Result and recommendation
 
-Tasks:
+Total area and number of rooms were the strongest price drivers. Properties in central Saint Petersburg were generally larger, had more rooms and higher ceilings, and commanded higher prices. A radius of approximately seven kilometres was identified as a practical boundary for the city-center segment. These variables can be used as inputs for automated listing validation.
 
-- Perform analysis of the data
-- To establish parameters that affect the value of real estate, including:
-   - Apartment parameters
-   - Geographical location and infrastructure
-   - Time of publication of the advertisement
-- To determine the nature of the dependence of the cost of housing on the listed parameters
+## Tools
 
-## Libraries
+Python, pandas, Matplotlib
 
-**`Pandas`,
-`NumPy`,
-`Matplotlib`,
-`Seaborn`**
+## Notebook
+
+[Open the analysis](exploratoy_data_analysis_eng.ipynb)
+
+## Data availability
+
+The original educational dataset is not included. The notebook expects `real_estate_data.csv` in a local `data/` directory.
