@@ -1,30 +1,28 @@
-## [Analysis of video games sales](https://github.com/irinaarm/Data_Science_Yandex/blob/main/04_analysis_of_video_games_sales/project_video_games_eng.ipynb)
+# Video Game Sales Analysis
 
-## Goal
+## Business problem
 
-Market analysis of gaming platforms in Europe, North America and Japan to identify potentially popular game genres and platforms in the regions and plan an advertising campaign
+Identify promising platforms, genres, and regional demand patterns to support planning of a 2017 advertising campaign.
 
-## Description
+## Approach
 
-According to historical data on game sales in various regions, it is necessary to plan an advertising campaign for the game service for 2017.
+- Cleaned game sales, rating, genre, and platform data.
+- Analyzed platform life cycles and regional sales profiles.
+- Measured relationships between reviews and sales.
+- Tested user-rating differences across platforms and genres.
 
-Data on game sales, user and expert ratings, genres and platforms is available from open sources
+## Result and recommendation
 
+PS4, 3DS, and Xbox One emerged as promising platforms. Regional preferences differed materially—especially in Japan—while Action remained broadly popular. Campaign planning should account for platform life-cycle stage, region-specific genre preferences, and critic scores rather than applying one global media mix.
 
-Tasks:
+## Tools
 
-- identify patterns that determine the success of the game
-- identify the top 5 popular platforms
-- identify the top 5 popular genres
-- explore the impact of critics' ratings and user ratings on game sales
-- test hypotheses about the difference in user ratings for different platforms and genres (A/B testing)
+Python, pandas, NumPy, SciPy, Matplotlib, Seaborn, Plotly
 
-## Libraries
+## Notebook
 
-**`Pandas`,
-`NumPy`,
-`Matplotlib`,
-`Seaborn`,
-`SciPy`**
+[Open the analysis](project_video_games_eng.ipynb)
 
+## Data availability
 
+The original educational dataset is not included. The notebook expects `games.csv` in a local `data/` directory.
