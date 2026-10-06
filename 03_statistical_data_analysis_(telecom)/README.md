@@ -1,24 +1,28 @@
-## [Analysis of telecom plans](https://github.com/irinaarm/Data_Science_Yandex/blob/main/03_statistical_data_analysis_(telecom)/statistical_data_analysis_eng.ipynb)
+# Telecom Plan Revenue Analysis
 
-## Goal
+## Business problem
 
-Analysis of the behaviour of the mobile operator's customers to determine the most profitable tariff for the operator.
+Determine which prepaid plan generates more value for the operator and should receive greater marketing support.
 
-## Description
+## Approach
 
-There is data from 500 mobile operator users for 2018: information about users, where they come from, what tariff they use, how many calls and messages and Internet traffic each used in 2018.
+- Aggregated monthly calls, messages, and internet usage by customer.
+- Calculated monthly revenue including overage charges.
+- Compared customer behavior and revenue distributions by plan.
+- Tested differences between plans and between Moscow and other regions.
 
-Tasks:
+## Result and recommendation
 
-- To make a preliminary analysis of tariffs
-- Test hypotheses:
-  - The average revenue of users of the two tariffs differs
-  - The average revenue of users from Moscow differs from the revenue of users from other regions
+Average revenue differed significantly between the two plans, while no significant revenue difference was found between Moscow and other regions. The Ultra plan produced higher revenue per user and was recommended for additional promotion, subject to the company’s broader pricing and market strategy.
 
-## Libraries
+## Tools
 
-**`Pandas`,
-`NumPy`,
-`Matplotlib`,
-`Seaborn`**
+Python, pandas, NumPy, SciPy, Matplotlib, Plotly
 
+## Notebook
+
+[Open the analysis](statistical_data_analysis_eng.ipynb)
+
+## Data availability
+
+The original educational datasets are not included. The notebook expects `calls.csv`, `internet.csv`, `messages.csv`, `tariffs.csv`, and `users.csv` in a local `data/` directory.
