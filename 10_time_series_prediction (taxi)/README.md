@@ -1,19 +1,32 @@
-## [Taxi orders prediction](https://github.com/irinaarm/Data_Science_Yandex/blob/main/10_time_series_prediction%20(taxi)/taxi_eng.ipynb)
+# Time-Series Demand Forecasting
 
-## Goal
+## Business problem
 
-To build a model to predict taxi demand for the next hour.
+Forecast airport taxi demand one hour ahead so the company can attract enough drivers during peak periods.
 
-## Description
+## Approach
 
-There is historical data on taxi orders at airports.
+- Resampled order data to hourly frequency.
+- Analyzed trend and daily and weekly seasonality.
+- Created calendar, lag, and rolling-window features.
+- Compared Linear Regression, Random Forest, LightGBM, and CatBoost on a chronological split.
 
-To attract more drivers during peak periods, you need to predict the number of taxi orders for the next hour.
+## Final metric
 
-The value of the `RMSE` metric in the test sample should be no more than `48`.
+Linear Regression achieved a test **RMSE of 34.63**, exceeding the project requirement of RMSE below 48. A previous-value baseline produced RMSE of 58.82.
 
-## Libraries
+## Business recommendation
 
-**`Pandas`,
-`NumPy`,
-`Scikit-learn`**
+Use the forecast to support hourly driver allocation, while monitoring missed demand spikes and retraining as demand patterns change.
+
+## Tools
+
+Python, pandas, scikit-learn, statsmodels, LightGBM, CatBoost, Matplotlib, Seaborn
+
+## Notebook
+
+[Open the analysis](taxi_eng.ipynb)
+
+## Data availability
+
+The original educational dataset is not included. The notebook expects `taxi.csv` in a local `data/` directory.
