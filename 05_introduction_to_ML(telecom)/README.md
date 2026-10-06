@@ -1,20 +1,28 @@
-## [Mobile plan recommendation system](https://github.com/irinaarm/Data_Science_Yandex/blob/main/05_introduction_to_ML(telecom)/mobile_tariffs_eng.ipynb)
+# Mobile Plan Recommendation
 
-## Goal
+## Business problem
 
-Build a binary classification machine learning model to recommend a suitable tariff
+Recommend the most suitable mobile plan from customer usage behavior using binary classification.
 
-## Description
+## Approach
 
-There is preprocessed data on the behaviour of customers who already use the tariffs.
+- Split the data into training, validation, and test samples.
+- Compared Decision Tree, Random Forest, and Logistic Regression models.
+- Tuned tree depth and the number of estimators on validation data.
+- Compared model performance with the majority-class baseline.
 
-It is necessary to build a machine learning model in order to recommend the most profitable tariff. Choose a model with the highest `accuracy` value at least `0.75`.
+## Result and recommendation
 
-## Libraries
+Random Forest produced the strongest validation accuracy at approximately **0.813**. The final test score must be regenerated after correcting the original notebook’s test-set training error; no unsupported replacement metric is reported here. In production, use the model only after clean holdout testing and monitoring by customer segment.
 
-**`Scikit-learn`,
-`XGBoost`,
-`Pandas`,
-`NumPy`,
-`Matplotlib`,
-`Seaborn`**
+## Tools
+
+Python, pandas, scikit-learn
+
+## Notebook
+
+[Open the analysis](mobile_tariffs_eng.ipynb)
+
+## Data availability
+
+The original educational dataset is not included. The notebook expects `users_behavior.csv` in a local `data/` directory.
