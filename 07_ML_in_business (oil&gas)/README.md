@@ -1,23 +1,31 @@
-## [Oil well location selection](https://github.com/irinaarm/Data_Science_Yandex/blob/main/07_ML_in_business%20(oil%26gas)/project_oil_wells_eng.ipynb)
-## Goal
+# Machine Learning for Business Decisions
 
-To build a machine learning model that will help determine the region of drilling a new well where production will bring the highest profit.
+## Business problem
 
-## Description
+Select the oil-production region expected to deliver the highest profit while keeping the probability of loss within acceptable limits.
 
-There is data on oil samples in three regions: 10,000 fields in each, where the quality of oil and the volume of its reserves were measured.
+## Approach
 
-Tasks:
+- Trained Linear Regression models to predict reserves in three regions.
+- Ranked candidate wells and calculated break-even economics.
+- Estimated profit distributions and downside risk using 1,000 bootstrap samples.
 
-- Perform data analysis
-- Apply a Linear Regression model to predict the volume of raw materials in a field based on a set of features in the data
-- Analyze possible profits and risks with Bootstrap technology
-- Select the region with the lowest probability of losses with a given budget limit for drilling a well.
+## Final result
 
-## Libraries
+Region 2 achieved mean predicted profit of **0.515 billion** monetary units, a **95% confidence interval of 0.069–0.932 billion**, and an estimated **1.0% risk of loss**.
 
-**`Pandas`,
-`NumPy`,
-`Matplotlib`,
-`Scikit-learn`**
+## Business recommendation
 
+Prioritize Region 2 because it combines the highest expected profit with the lowest estimated downside risk.
+
+## Tools
+
+Python, pandas, NumPy, SciPy, scikit-learn, Matplotlib, Seaborn
+
+## Notebook
+
+[Open the analysis](project_oil_wells_eng.ipynb)
+
+## Data availability
+
+The original educational datasets are not included. The notebook expects `geo_data_0.csv`, `geo_data_1.csv`, and `geo_data_2.csv` in a local `data/` directory.
