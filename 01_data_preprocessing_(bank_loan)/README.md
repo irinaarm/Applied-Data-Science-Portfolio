@@ -1,27 +1,27 @@
-## [Analysis of borrowers’ risk of defaulting](https://github.com/irinaarm/Data_Science_Yandex/tree/main/01_data_preprocessing_(bank_loan))
+# Borrower Default Risk Analysis
 
-## Goal
+## Business problem
 
-Based on the statistics on the solvency of customers, to investigate the factors influencing the fact of repayment of the loan on time.
+Identify borrower characteristics associated with delayed loan repayment to support credit-risk assessment.
 
-## Description
+## Approach
 
-The bank's credit department provided personal data about customers, including gender, age, marital status, number of children, education, work experience, income, purpose of the loan, and non-repayment of the loan on time.
+- Cleaned missing, anomalous, and duplicate records.
+- Standardized categorical values and grouped loan purposes.
+- Compared default rates by number of children, marital status, income group, and loan purpose.
 
-There are omissions, anomalies, and errors in the data.
+## Result and recommendation
 
-Tasks:
+The analysis identified meaningful differences in repayment behavior across borrower segments. Property-related borrowers showed comparatively strong repayment discipline, while some car-loan and higher-risk demographic segments had higher default rates. These findings can support a broader scoring model, but small subgroups should not be used as standalone approval rules.
 
-- To perform data preprocessing
-- To investigate the impact on the fact of repayment of the loan on time of the following factors:
-   - the presence of children
-   - marital status
-   - income level
-   - the purpose of the loan
+## Tools
 
-## Libraries
+Python, pandas, PyMystem3
 
-**`Pandas`,
-`PyMystem3`,
-`Matplotlib`,
-`Seaborn`**
+## Notebook
+
+[Open the analysis](data_preprocessing_eng.ipynb)
+
+## Data availability
+
+The original educational dataset is not included. To reproduce the notebook, place `data.csv` in a local `data/` directory and update the loading cell if required.
