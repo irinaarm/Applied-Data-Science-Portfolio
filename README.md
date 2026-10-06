@@ -2,7 +2,16 @@
 
 This repository contains ten end-to-end projects completed during the Yandex Practicum Data Science program. The portfolio covers data analysis, statistical modelling, supervised learning, business-focused machine learning and time-series forecasting. I now apply this foundation to supply chain planning, process automation and AI-enabled decision support.
 
-## Featured projects
+## Featured supply chain decision-support concept
+
+### [PSOP Decision Support Prototype](psop-decision-support-prototype/)
+
+- **Business problem:** Monthly PSOP cycles often require substantial manual data preparation while risks, exceptions and decisions remain fragmented across functions.
+- **Concept:** A decision-support workspace combining an executive dashboard, AI-generated summaries, prioritized decision queues, scenario simulation, action tracking and a decision log.
+- **Business value:** Faster preparation, clearer financial exposure, explicit ownership and a traceable path from exception to decision and follow-through.
+- **Data note:** Independent concept developed using fictional demonstration data.
+
+## Featured data science projects
 
 ### [Time-Series Demand Forecasting](10_time_series_prediction%20%28taxi%29/taxi_eng.ipynb)
 
