@@ -1,20 +1,33 @@
-## [Customers churn prediction](https://github.com/irinaarm/Data_Science_Yandex/blob/main/06_supervised_learning%20(banking)/project_bank_eng.ipynb)
+# Customer Churn Prediction
 
-## Goal
+## Business problem
 
-To build a machine learning model for predicting the fact of a bank customer's churn (binary classification)
+Identify bank customers likely to leave so retention activity can focus on high-risk customers before churn occurs.
 
-## Description
+## Approach
 
-There is historical data on customer behaviour and termination of contracts with the bank.
+- Cleaned customer data and encoded categorical variables.
+- Compared Logistic Regression, Decision Tree, and Random Forest models.
+- Addressed class imbalance through weighting, upsampling, and downsampling.
+- Evaluated the final model on a held-out test set.
 
-It is necessary to build a machine learning model to predict the customer's churn from the bank in the near future. Select the model with the largest possible value of the `F1` measure. The maximum value of the metric is `0.59`. Use additional `AUC-ROC` metric.
+## Final metrics
 
-## Libraries
+- **F1:** 0.603, above the required minimum of 0.59
+- **ROC-AUC:** 0.86
 
-**`Pandas`,
-`NumPy`,
-`Matplotlib`,
-`Seaborn`,
-`Scikit-learn`**
+## Business recommendation
 
+Use Random Forest churn scores to prioritize retention campaigns. Set the intervention threshold using customer value and campaign cost rather than treating every predicted churn case equally.
+
+## Tools
+
+Python, pandas, NumPy, scikit-learn, Matplotlib
+
+## Notebook
+
+[Open the analysis](project_bank_eng.ipynb)
+
+## Data availability
+
+The original educational dataset is not included. The notebook expects `Churn.csv` in a local `data/` directory.
