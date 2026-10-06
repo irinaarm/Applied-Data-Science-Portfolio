@@ -1,23 +1,33 @@
-## [Gold recovery prediction](https://github.com/irinaarm/Data_Science_Yandex/blob/main/08_gold_recovery_prediction/gold_recovery_eng.ipynb)
+# Gold Recovery Prediction
 
-## Goal
+## Business problem
 
-To build a machine learning model to predict the concentration of gold at different stages during the purification process of gold-bearing ore.
+Predict gold-recovery efficiency from ore-processing parameters to help avoid operating configurations with unprofitable characteristics.
 
-## Description
+## Approach
 
-It is necessary to build a model that can predict the recovery rate of gold from gold-bearing ore based on data with extraction and purification parameters. The model will help optimize production to avoid launching an enterprise with unprofitable characteristics.
+- Validated the recovery calculation and inspected unavailable test features.
+- Analyzed metal concentrations and particle-size distributions across processing stages.
+- Compared Linear Regression, Decision Tree, and Random Forest models using cross-validation.
+- Evaluated performance with the project-specific final sMAPE metric.
 
+## Final metrics
 
-Tasks:
+- **Linear Regression final sMAPE:** 7.59%
+- **Dummy baseline final sMAPE:** 8.56%
 
-- Analyze the data
-- Build regression models to predict the concentration of gold
-- Assess the quality of the model prediction, a custom quality metric used — `sMAPE` (symmetric mean absolute percentage deviation)
+## Business recommendation
 
-## Libraries
+Use the linear model as a transparent baseline, but validate it on more recent production data and investigate the removed missing-value cases before operational deployment.
 
-**`Pandas`,
-`NumPy`,
-`Matplotlib`,
-`Scikit-learn`**
+## Tools
+
+Python, pandas, NumPy, scikit-learn, Matplotlib, Seaborn
+
+## Notebook
+
+[Open the analysis](gold_recovery_eng.ipynb)
+
+## Data availability
+
+The original educational datasets are not included. The notebook expects the three `gold_recovery_*_new.csv` files in a local `data/` directory.
